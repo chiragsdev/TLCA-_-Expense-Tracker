@@ -1,6 +1,6 @@
 // Users API utilities for MySQL backend
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://tlca-expense-tracker-yasz.onrender.com/api/';
 
 export interface User {
   id?: string;
@@ -26,11 +26,11 @@ export async function getUsers(): Promise<User[]> {
     });
 
     const data = await response.json();
-    
+
     if (data.success) {
       return data.users || [];
     }
-    
+
     console.error('Failed to get users:', data.message);
     return [];
   } catch (error) {
@@ -43,7 +43,7 @@ export async function getUsers(): Promise<User[]> {
 export async function updateUser(id: string, updates: Partial<User>): Promise<{ success: boolean; message?: string }> {
   try {
     const token = localStorage.getItem('auth_token');
-    
+
     const response = await fetch(`${API_BASE_URL}/users/update.php`, {
       method: 'PUT',
       headers: {
@@ -64,7 +64,7 @@ export async function updateUser(id: string, updates: Partial<User>): Promise<{ 
 export async function deleteUser(id: string): Promise<{ success: boolean; message?: string }> {
   try {
     const token = localStorage.getItem('auth_token');
-    
+
     const response = await fetch(`${API_BASE_URL}/users/delete.php?id=${id}`, {
       method: 'DELETE',
       headers: {

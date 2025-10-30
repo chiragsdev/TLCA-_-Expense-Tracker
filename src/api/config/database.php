@@ -10,7 +10,7 @@
 define('DB_HOST', 'figueras.pdx1-mysql-a7-4b.dreamhost.com');
 define('DB_NAME', 'tlcaexpense');
 define('DB_USER', 'adminexpense');
-define('DB_PASS', 'mickeymouse@7700');  // ← CHANGE THIS TO YOUR ACTUAL PASSWORD
+define('DB_PASS', 'mickeymouse@7700');  
 define('DB_CHARSET', 'utf8mb4');
 
 // JWT Secret for session tokens - CHANGE THIS TO A RANDOM STRING!

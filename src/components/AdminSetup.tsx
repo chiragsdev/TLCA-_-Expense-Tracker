@@ -74,7 +74,7 @@ export function AdminSetup({ onComplete, onSkipToLogin }: AdminSetupProps) {
     setSuccess("");
 
     try {
-      const API_BASE_URL = '/api';
+      const API_BASE_URL = 'https://tlca-expense-tracker-yasz.onrender.com/api/';
 
       // First, create the default departments
       console.log("Initializing default departments...");

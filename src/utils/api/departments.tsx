@@ -1,6 +1,6 @@
 // Departments API utilities for MySQL backend
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://tlca-expense-tracker-yasz.onrender.com/api/';
 
 export interface Department {
   id?: string;
