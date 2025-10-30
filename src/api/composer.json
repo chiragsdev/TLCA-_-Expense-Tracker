@@ -1,0 +1,7 @@
+{
+  "name": "my-php-backend",
+  "description": "PHP backend for my fullstack app",
+  "require": {
+    "php": "^8.2"
+  }
+}
